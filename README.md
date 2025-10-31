@@ -10,9 +10,30 @@ You will then implement extensions to improve on top of this baseline.
 
 ## Setup instructions
 
+### Option 1: Using UV (Recommended)
+
+[UV](https://github.com/astral-sh/uv) is a fast Python package installer and resolver. To set up the project with UV:
+
+```bash
+# Install UV if you haven't already
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Create a virtual environment and install dependencies
+uv venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install the project and its dependencies
+uv pip install -e .
+```
+
+### Option 2: Using Conda
+
 * Follow `setup.sh` to properly setup a conda environment and install dependencies.
+
+### Additional Notes
+
 * There is a detailed description of the code structure in [STRUCTURE.md](./STRUCTURE.md), including a description of which parts you will need to implement.
-* You are only allowed to use libraries that are installed by `setup.sh`, external libraries that give you other pre-trained models or embeddings are not allowed (e.g., `transformers`).
+* You are only allowed to use libraries that are installed by `setup.sh` or defined in `pyproject.toml`, external libraries that give you other pre-trained models or embeddings are not allowed (e.g., `transformers`).
 
 ## Handout
 

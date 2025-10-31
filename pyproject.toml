@@ -1,0 +1,55 @@
+[project]
+name = "minbert-cs224n"
+version = "0.1.0"
+description = "CS 224N Default Final Project - Multitask BERT Implementation"
+readme = "README.md"
+requires-python = ">=3.8,<3.12"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Stanford CS 224N"}
+]
+
+dependencies = [
+    "torch>=1.8.0,<2.0.0",
+    "torchvision>=0.9.0",
+    "torchaudio>=0.8.0",
+    "tqdm==4.58.0",
+    "requests==2.25.1",
+    "importlib-metadata==3.7.0",
+    "filelock==3.0.12",
+    "scikit-learn>=0.24.0",
+    "tokenizers==0.10.1",
+    "explainaboard-client==0.0.7",
+    "numpy>=1.19.0,<1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = [
+    "base_bert",
+    "bert",
+    "classifier",
+    "config",
+    "datasets",
+    "evaluation",
+    "multitask_classifier",
+    "optimizer",
+    "optimizer_test",
+    "prepare_submit",
+    "sanity_check",
+    "tokenizer",
+    "utils"
+]
+
+[tool.setuptools.package-data]
+"*" = ["*.data", "*.npy"]
